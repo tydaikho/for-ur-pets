@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - 4upets@localhost" uuid="7054e103-3d2f-41be-b12f-dbbec3b3d587">
+    <database-info product="MySQL" version="5.6.24-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="4upets"/>
+    <table name="tbl_like" schema="" catalog="4upets" type="TABLE">
+      <column name="like_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="photo_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date_created" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="date_updaed" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="like_id"/>
+      <foreign-key name="fk_like_photo" columns="photo_id" ref-table="tbl_photo" ref-schema="" ref-catalog="4upets" ref-columns="photo_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_like_user" columns="user_id" ref-table="tbl_user" ref-schema="" ref-catalog="4upets" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_like_photo_idx" unique="false" columns="photo_id"/>
+      <index name="fk_like_user_idx" unique="false" columns="user_id"/>
+    </table>
+    <table name="tbl_photo" schema="" catalog="4upets" type="TABLE">
+      <column name="photo_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="caption" sqlType="TEXT" precision="65535" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="latitude" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7"/>
+      <column name="longitude" sqlType="FLOAT" precision="12" scale="0" nullable="true" jdbcType="7"/>
+      <column name="image_path" sqlType="VARCHAR" precision="256" scale="0" nullable="false" jdbcType="12"/>
+      <column name="image_size" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="date_created" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="date_updated" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="photo_id"/>
+      <foreign-key name="fk_photo_user" columns="user_id" ref-table="tbl_user" ref-schema="" ref-catalog="4upets" ref-columns="user_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="fk_like_photo" table="tbl_like" schema="" catalog="4upets" columns="photo_id"/>
+      <exported-key name="fk_tag_photo" table="tbl_tag" schema="" catalog="4upets" columns="photo_id"/>
+      <index name="fk_photo_user_idx" unique="false" columns="user_id"/>
+    </table>
+    <table name="tbl_tag" schema="" catalog="4upets" type="TABLE">
+      <column name="tag_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_in_type" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="type" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="photo_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="tag_id"/>
+      <foreign-key name="fk_tag_photo" columns="photo_id" ref-table="tbl_photo" ref-schema="" ref-catalog="4upets" ref-columns="photo_id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_tag_photo_idx" unique="false" columns="photo_id"/>
+    </table>
+    <table name="tbl_tag_user" schema="" catalog="4upets" type="TABLE">
+      <column name="user_id" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+    </table>
+    <table name="tbl_tag_word" schema="" catalog="4upets" type="TABLE">
+      <column name="tag_word_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="image_url" sqlType="VARCHAR" precision="256" scale="0" nullable="true" jdbcType="12"/>
+      <column name="name" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="tag_word_id"/>
+    </table>
+    <table name="tbl_user" schema="" catalog="4upets" type="TABLE">
+      <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="username" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="128" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="64" scale="0" nullable="false" jdbcType="12"/>
+      <column name="first_name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="last_name" sqlType="VARCHAR" precision="45" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date_created" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="date_updated" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="sex" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="user_id"/>
+      <exported-key name="fk_like_user" table="tbl_like" schema="" catalog="4upets" columns="user_id"/>
+      <exported-key name="fk_photo_user" table="tbl_photo" schema="" catalog="4upets" columns="user_id"/>
+      <index name="email_UNIQUE" unique="true" columns="email"/>
+    </table>
+  </data-source>
+</component>

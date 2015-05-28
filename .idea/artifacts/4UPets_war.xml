@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="4UPets:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="4UPets.war">
+      <element id="artifact" artifact-name="4UPets:war exploded" />
+    </root>
+  </artifact>
+</component>
