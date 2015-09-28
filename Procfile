@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -jar target/SFMProject-0.0.1-SNAPSHOT
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/*.jar
