@@ -1,0 +1,4 @@
+com\project\fpt\sfm\model\Model.class
+com\project\fpt\sfm\model\Test.class
+com\project\fpt\sfm\web\controller\HomeController.class
+com\project\fpt\sfm\SfmProjectApplication.class
