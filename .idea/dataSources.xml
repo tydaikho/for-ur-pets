@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="911317054">
-    <data-source source="LOCAL" name="MySQL - 4upets@localhost" uuid="7054e103-3d2f-41be-b12f-dbbec3b3d587">
+  <component name="DataSourceManagerImpl" format="xml" hash="336715987">
+    <data-source source="LOCAL" name="MySQL - sfm@localhost" uuid="5ae67a80-9c90-41e1-a90b-2fb7ba07bb9a">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/4upets</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/sfm</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
@@ -15,7 +15,7 @@
       </driver-properties>
       <libraries>
         <library>
-          <url>file://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.34/mysql-connector-java-5.1.34.jar</url>
+          <url>file://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.30/mysql-connector-java-5.1.30.jar</url>
         </library>
       </libraries>
     </data-source>

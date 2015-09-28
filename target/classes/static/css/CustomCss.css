@@ -1,0 +1,25 @@
+
+
+/*home.html*/
+
+/*Model Student Profile*/
+.borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none;
+}
+
+.modal .modal-nor {
+    width: 50%; /* respsonsive width */
+    margin-left: 25%; /* width/2) */
+}
+
+/*Student Module*/
+.bg-white{
+    background-color: white;
+}
+.box-borderless{
+    border : none;
+}
+
+.table-text-center tbody td, .table-text-center tbody th{
+    text-align: center;
+}

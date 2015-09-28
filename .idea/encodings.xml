@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/project/forupets/api/response/BaseResponse.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/src/main/java/com/project/forupets/api/response/LoginResponse.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/database" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/locale" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/log4j.properties" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/src/main/webapp/resources" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/bootstrap" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/js/jQuery-2.1.4.min.js" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/js/jquery-ui.min.js" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/static/plugins/datatables" charset="windows-1252" />
+    <file url="PROJECT" charset="windows-1252" />
   </component>
 </project>
