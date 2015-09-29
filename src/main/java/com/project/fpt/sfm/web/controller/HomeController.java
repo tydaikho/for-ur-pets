@@ -21,6 +21,7 @@ public class HomeController {
     @RequestMapping("/student")
     public String studenPage(Model model){
         model.addAttribute("sidebar", "student/student-sidebar");
+        model.addAttribute("content", "student/profile");
 
         return "home";
     }
@@ -51,7 +52,7 @@ public class HomeController {
 
     @RequestMapping("/student/profile")
     public String studentProfile(Model model){
-        model.addAttribute("content", "student/student-profile");
+        model.addAttribute("content", "student/update-profile");
         model.addAttribute("sidebar", "student/student-sidebar");
 
         return "home";
@@ -83,7 +84,7 @@ public class HomeController {
 
     @RequestMapping("/admin/hocphi")
     public String adminHocPhi(Model model){
-       // model.addAttribute("content", "student/xemlaivay");
+        model.addAttribute("content", "admin/hocphi");
         model.addAttribute("sidebar", "admin/admin-sidebar");
 
         return "home";
