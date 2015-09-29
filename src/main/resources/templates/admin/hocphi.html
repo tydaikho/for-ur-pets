@@ -1,148 +1,455 @@
-<div class="content-wrapper" style="min-height: 916px;">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-        <h1>
-            Tình Trạng Học Phí Sinh Viên
-        </h1>
-        <!--   <ol class="breadcrumb">
-               <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-               <li><a href="#">Tables</a></li>
-               <li class="active">Data tables</li>
-           </ol>-->
-    </section>
+<div class="content-wrapper bg-white" style="min-height: 916px;">
 
     <!-- Main content -->
     <section class="content">
         <div class="row">
-            <div class="col-xs-10 col-md-offset-1">
-                <div class="box">
-                    <div class="col-xs-8">
-                        <h1>Fall 2015</h1>
+            <div class="col-xs-12">
+                <div class="box box-borderless">
+                    <h2 class="text-center">Danh Sách Đóng Học Phí</h2>
+                    <!--Tong Ket-->
+                    <div class="col-xs-6 col-md-offset-3">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title text-center">Tổng Kết</h3>
 
-                        <p>Semester 9</p>
+                                <div class="box-tools pull-right">
+                                    <button type="button"
+                                            class="btn btn-box-tool"
+                                            data-widget="collapse"><i
+                                            class="fa fa-minus"></i></button>
+                                </div>
+                                <!-- /.box-tools -->
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body" style="display: block;">
+                                <table class="table table-hover borderless table-responsive">
+                                    <tbody>
+                                    <tr>
+                                        <td><b>Dự Toán Thu</b></td>
+                                        <td>500,000,000 (VNĐ)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Tổng Số Tiền Đã Thu</b></td>
+                                        <td>498,000,000 (VNĐ)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Thiếu</b></td>
+                                        <td>2,000,00 (VNĐ)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Tổng Số Tiền Cho Vay</b></td>
+                                        <td>200,000,000 (VNĐ)</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
 
-                        <p>From : 07/09/2015 - 16/01/2016</p>
+
                     </div>
+                    <div id="tuition_table_wrapper"
+                         class="dataTables_wrapper form-inline dt-bootstrap">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="dataTables_length"
+                                     id="tuition_table_length"><label>Show
+                                    <select
+                                            name="tuition_table_length"
+                                            aria-controls="tuition_table"
+                                            class="form-control input-sm">
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                    </select> entries</label></div>
+                            </div>
+                            <div class="col-sm-6">
+                                <!--  <div id="tuition_table_filter"
+                                       class="dataTables_filter">
+                                      <label>Search:<input type="search"
+                                                           class="form-control input-sm"
+                                                           placeholder=""
+                                                           aria-controls="tuition_table"/></label>
+                                  </div>-->
+                                <div class="input-group pull-right">
+                                    <div class="input-group-btn">
+                                        <button type="button"
+                                                class="btn btn-default dropdown-toggle"
+                                                data-toggle="dropdown"
+                                                aria-haspopup="true"
+                                                aria-expanded="false">STT <span
+                                                class="caret"></span></button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">MSSV</a></li>
+                                            <li><a href="#">Họ Và Tên</a></li>
+                                            <li><a href="#">Trạng Thái</a></li>
+                                            <li role="separator"
+                                                class="divider"></li>
+                                            <li><a href="#">Separated link</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- /btn-group -->
+                                    <input type="text" class="form-control"
+                                           aria-label="..."
+                                           placeholder="Search"/>
+                                </div>
+                                <!-- /input-group -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="tuition_table"
+                                       class="table table-hover table-bordered table-responsive table-text-center dataTable"
+                                       role="grid"
+                                       aria-describedby="tuition_table_info">
+                                    <thead>
+                                    <tr role="row">
+                                        <th class="sorting_asc" width="5%"
+                                            tabindex="0"
+                                            aria-controls="tuition_table"
+                                            rowspan="1"
+                                            colspan="1" aria-sort="ascending"
+                                            aria-label="Rendering engine: activate to sort column descending">
+                                            STT
+                                        </th>
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="tuition_table"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Browser: activate to sort column ascending">
+                                            MSSV
+                                        </th>
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="tuition_table"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Platform(s): activate to sort column ascending">
+                                            Họ Và Tên
+                                        </th>
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="tuition_table"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="Engine version: activate to sort column ascending">
+                                            Trạng Thái
+                                        </th>
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="tuition_table"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="CSS grade: activate to sort column ascending">
+                                            Nội Dung Đóng Tiền
+                                        </th>
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="tuition_table"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="CSS grade: activate to sort column ascending">
+                                            Phải Đóng
+                                        </th>
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="tuition_table"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="CSS grade: activate to sort column ascending">
+                                            Đã Đóng
+                                        </th>
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="tuition_table"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="CSS grade: activate to sort column ascending">
+                                            Trạng Thái
+                                        </th>
+                                        <th class="sorting" tabindex="0"
+                                            aria-controls="tuition_table"
+                                            rowspan="1"
+                                            colspan="1"
+                                            aria-label="CSS grade: activate to sort column ascending">
+                                            Xem Chi Tiết
+                                        </th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
 
-                    <div class="col-xs-4">
-                        <div class="dropdown" style="margin-top: 20px">
-                            <button class="btn btn-default dropdown-toggle"
-                                    type="button" id="dropdownMenu1"
-                                    data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="true">
-                                Semester 9
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu"
-                                aria-labelledby="dropdownMenu1">
-                                <li><a href="#">Semester 1</a></li>
-                                <li><a href="#">Semester 2</a></li>
-                                <li><a href="#">Semester 3</a></li>
-                                <li><a href="#">Semester 9</a></li>
-                            </ul>
+                                    <tr role="row">
+                                        <td class="sorting_1">1.</td>
+                                        <td>SE60964</td>
+                                        <td>Trần Khắc Vỹ</td>
+                                        <td>Tín Dụng 50%</td>
+                                        <td>Chuyên Ngành 1</td>
+                                        <td>12,200,000</td>
+                                        <td>12,200,000</td>
+                                        <td>Nộp Đủ</td>
+                                        <td><a href="#" data-toggle="modal"
+                                               data-target="#tuitionModal">Chi
+                                            Tiết</a></td>
+                                    </tr>
+
+                                    <tr role="row">
+                                        <td class="sorting_1">2.</td>
+                                        <td>SE60964</td>
+                                        <td>Trần Khắc Vỹ</td>
+                                        <td>Tín Dụng 50%</td>
+                                        <td>Chuyên Ngành 1</td>
+                                        <td>12,200,000</td>
+                                        <td>12,200,000</td>
+                                        <td>Nộp Đủ</td>
+                                        <td><a href="#">Chi Tiết</a></td>
+                                    </tr>
+
+                                    <tr role="row">
+                                        <td class="sorting_1">3.</td>
+                                        <td>SE60964</td>
+                                        <td>Trần Khắc Vỹ</td>
+                                        <td>Tín Dụng 50%</td>
+                                        <td>Chuyên Ngành 1</td>
+                                        <td>12,200,000</td>
+                                        <td>12,200,000</td>
+                                        <td>Nộp Đủ</td>
+                                        <td><a href="#">Chi Tiết</a></td>
+                                    </tr>
+
+                                    <tr role="row">
+                                        <td class="sorting_1">4.</td>
+                                        <td>SE60964</td>
+                                        <td>Trần Khắc Vỹ</td>
+                                        <td>Tín Dụng 50%</td>
+                                        <td>Chuyên Ngành 1</td>
+                                        <td>12,200,000</td>
+                                        <td>12,200,000</td>
+                                        <td>Nộp Đủ</td>
+                                        <td><a href="#">Chi Tiết</a></td>
+                                    </tr>
+
+
+                                    </tbody>
+                                    <tfoot>
+                                    <tr>
+                                        <th rowspan="1" colspan="1">STT</th>
+                                        <th rowspan="1" colspan="1">MSSV</th>
+                                        <th rowspan="1" colspan="1">
+                                            Họ Và Tên
+                                        </th>
+                                        <th rowspan="1" colspan="1">Trạng Thái
+                                        </th>
+                                        <th rowspan="1" colspan="1">Nội Dung
+                                            Đóng Tiền
+                                        </th>
+                                        <th rowspan="1" colspan="1">Phải Đóng
+                                        </th>
+                                        <th rowspan="1" colspan="1">
+                                            Đã Đóng
+                                        </th>
+                                        <th rowspan="1" colspan="1">Tình Trạng
+                                        </th>
+                                        <th rowspan="1" colspan="1">ChiTiết
+                                        </th>
+                                    </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="dataTables_info"
+                                     id="tuition_table_info"
+                                     role="status" aria-live="polite">Showing 1
+                                    to 10 of 57 entries
+                                </div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="dataTables_paginate paging_simple_numbers"
+                                     id="tuition_table_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button previous disabled"
+                                            id="tuition_table_previous"><a
+                                                href="#"
+                                                aria-controls="tuition_table"
+                                                data-dt-idx="0"
+                                                tabindex="0">Previous</a>
+                                        </li>
+                                        <li class="paginate_button active"><a
+                                                href="#"
+                                                aria-controls="tuition_table"
+                                                data-dt-idx="1"
+                                                tabindex="0">1</a></li>
+                                        <li class="paginate_button "><a href="#"
+                                                                        aria-controls="tuition_table"
+                                                                        data-dt-idx="2"
+                                                                        tabindex="0">2</a>
+                                        </li>
+                                        <li class="paginate_button "><a href="#"
+                                                                        aria-controls="tuition_table"
+                                                                        data-dt-idx="3"
+                                                                        tabindex="0">3</a>
+                                        </li>
+                                        <li class="paginate_button "><a href="#"
+                                                                        aria-controls="tuition_table"
+                                                                        data-dt-idx="4"
+                                                                        tabindex="0">4</a>
+                                        </li>
+                                        <li class="paginate_button "><a href="#"
+                                                                        aria-controls="tuition_table"
+                                                                        data-dt-idx="5"
+                                                                        tabindex="0">5</a>
+                                        </li>
+                                        <li class="paginate_button "><a href="#"
+                                                                        aria-controls="tuition_table"
+                                                                        data-dt-idx="6"
+                                                                        tabindex="0">6</a>
+                                        </li>
+                                        <li class="paginate_button next"
+                                            id="tuition_table_next"><a href="#"
+                                                                       aria-controls="tuition_table"
+                                                                       data-dt-idx="7"
+                                                                       tabindex="0">Next</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-
-                    <table class="table table-bordered">
-                        <tbody>
-                        <tr>
-                            <th style="width: 10px">STT</th>
-                            <th>Mã Môn</th>
-                            <th>Tên Môn</th>
-                            <th>Số Tín Chỉ</th>
-                            <th>Half</th>
-                            <th>Điểm Trung Bình</th>
-                            <th>Trạng Thái</th>
-                            <th>Ghi Chú</th>
-                        </tr>
-
-                        <tr>
-                            <td>1.</td>
-                            <td>
-                                PRJ
-                            </td>
-                            <td>Advance Java</td>
-                            <td>3</td>
-                            <th>1</th>
-                            <td>7.5</td>
-                            <td>Passed</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>1.</td>
-                            <td>
-                                PRJ
-                            </td>
-                            <td>Advance Java</td>
-                            <td>3</td>
-                            <th>1</th>
-                            <td>7.5</td>
-                            <td>Passed</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>1.</td>
-                            <td>
-                                PRJ
-                            </td>
-                            <td>Advance Java</td>
-                            <td>3</td>
-                            <th>1</th>
-                            <td>7.5</td>
-                            <td>Passed</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>1.</td>
-                            <td>
-                                PRJ
-                            </td>
-                            <td>Advance Java</td>
-                            <td>3</td>
-                            <th>1</th>
-                            <td>7.5</td>
-                            <td>Failed</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>1.</td>
-                            <td>
-                                PRJ
-                            </td>
-                            <td>Advance Java</td>
-                            <td>3</td>
-                            <th>2</th>
-                            <td>7.5</td>
-                            <td>Failed</td>
-                            <td></td>
-                        </tr>
-
-                        <tr>
-                            <td>1.</td>
-                            <td>
-                                DB
-                            </td>
-                            <td>Introduction To Database</td>
-                            <td>3</td>
-                            <th>2</th>
-                            <td>8</td>
-                            <td>Pass</td>
-                            <td>Học Lại</td>
-                        </tr>
-
-                        </tbody>
-                    </table>
                 </div>
                 <!-- /.box -->
             </div>
             <!-- /.col -->
         </div>
         <!-- /.row -->
+
+        <!--Modal Chi Tiet-->
+        <div class="modal fade" id="tuitionModal" role="dialog">
+            <div class="modal-dialog modal-nor">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                        <button type="button" class="close"
+                                data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title text-center"><b>Thông Tin Chi
+                            Tiết</b></h4>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table borderless">
+                            <tr>
+                                <td width="20%"><b>Họ Và Tên</b></td>
+                                <td>Trần Khắc Vỹ</td>
+                            </tr>
+                            <tr>
+                                <td><b>MSSV</b></td>
+                                <td>SE60964</td>
+                            </tr>
+                            <tr>
+                                <td><b>Tình Trạng</b></td>
+                                <td>Tín Dụng 50%</td>
+                            </tr>
+                        </table>
+
+                        <h5><b>Học Phí Đã Nộp</b></h5>
+
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse"
+                                           data-parent="#accordion"
+                                           href="#collapse1">TA1 (12/6/2014 -
+                                            12/10/2014)</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1"
+                                     class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="col-xs-6">
+                                            <p><b>Đã Đóng : </b> <span>12,200,000 (VNĐ)</span>
+                                            </p>
+
+                                            <p><b>Đã Vay : </b> <span>12,200,000 (VNĐ)</span>
+                                            </p>
+
+                                            <p><b>Lãi Xuất : </b>
+                                                <span>6,3%/Năm</span></p>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <b>Ngày : </b> 12/5/2014
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse"
+                                           data-parent="#accordion"
+                                           href="#collapse2">TA2 (12/12/2014 -
+                                            12/3/2015)</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse2"
+                                     class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <div class="col-xs-6">
+                                            <p><b>Đã Đóng : </b> <span>12,200,000 (VNĐ)</span>
+                                            </p>
+
+                                            <p><b>Đã Vay : </b> <span>12,200,000 (VNĐ)</span>
+                                            </p>
+
+                                            <p><b>Lãi Xuất : </b>
+                                                <span>6,3%/Năm</span></p>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            Ngày : 12/5/2014
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse"
+                                           data-parent="#accordion"
+                                           href="#collapse3">CN1 (12/4/2015 -
+                                            12/8/2015)</a>
+                                    </h4>
+                                </div>
+                                <div id="collapse3"
+                                     class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <div class="col-xs-6">
+                                            <p><b>Đã Đóng : </b> <span>12,200,000 (VNĐ)</span>
+                                            </p>
+
+                                            <p><b>Đã Vay : </b> <span>12,200,000 (VNĐ)</span>
+                                            </p>
+
+                                            <p><b>Lãi Xuất : </b>
+                                                <span>6,3%/Năm</span></p>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            Ngày : 12/5/2014
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box-borderless">
+                               <h5 class="text-center"><b>Tổng Kết</b></h5>
+                               <p class="text-center"><b>Đã Vay : </b> <span>70,200,000 (VNĐ)</span>
+                               </p>
+                               <p class="text-center"><b>Lãi Vay : </b> <span>18,200,000 (VNĐ)</span>
+                               </p>
+                               <p class="text-center"><b>Tổng : </b> <span>88,400,000 (VNĐ)</span>
+                               </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
     <!-- /.content -->
 </div>
