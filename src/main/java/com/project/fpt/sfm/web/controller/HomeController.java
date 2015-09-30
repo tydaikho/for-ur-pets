@@ -10,11 +10,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
+    @RequestMapping("/")
+    public String index(Model model){
+        model.addAttribute("sidebar", "student/student-sidebar");
+        return "index";
+    }
+
+
     @RequestMapping("/home")
     public String homePage(Model model){
         model.addAttribute("sidebar", "student/student-sidebar");
-
-
         return "home";
     }
 
