@@ -100,8 +100,60 @@ public class HomeController {
 
     @RequestMapping("/admin")
     public String admin(Model model){
-        // model.addAttribute("content", "student/xemlaivay");
+        model.addAttribute("content", "admin/admin-home");
         model.addAttribute("sidebar", "admin/admin-sidebar");
+
+        return "home";
+    }
+
+    @RequestMapping("/admin/danh-sach-vay-tin-dung")
+    public String adminStudentLoansCredit(Model model){
+        model.addAttribute("content", "admin/admin-loans-credit");
+        model.addAttribute("sidebar", "admin/admin-sidebar");
+
+        return "home";
+    }
+
+    @RequestMapping("/admin/danh-sach-tam-ngung-hoc")
+    public String managerListSuspension(Model model){
+        model.addAttribute("content", "admin/manager-list-suspension");
+        model.addAttribute("sidebar", "admin/admin-sidebar");
+
+        return "home";
+    }
+
+
+    /**
+     * STAFF
+     */
+    @RequestMapping("/staff/nhap-thong-tin-sinh-vien")
+    public String addStudentInformation(Model model){
+        model.addAttribute("content", "staff/add-student-information");
+        model.addAttribute("sidebar", "staff/staff-sidebar");
+
+        return "home";
+    }
+
+    @RequestMapping("/staff/nhap-ket-qua-hoc-tap")
+    public String addStudyResult(Model model){
+        model.addAttribute("content", "staff/add-study-result");
+        model.addAttribute("sidebar", "staff/staff-sidebar");
+
+        return "home";
+    }
+
+    @RequestMapping("/staff/nhap-thong-tin-tai-chinh")
+    public String addStudentFinance(Model model){
+        model.addAttribute("content", "staff/add-finance-information");
+        model.addAttribute("sidebar", "staff/staff-sidebar");
+
+        return "home";
+    }
+
+    @RequestMapping("/staff")
+    public String staff(Model model){
+        //model.addAttribute("content", "staff/add-finance-information");
+        model.addAttribute("sidebar", "staff/staff-sidebar");
 
         return "home";
     }

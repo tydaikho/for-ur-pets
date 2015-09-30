@@ -1,0 +1,271 @@
+<div class="content-wrapper bg-white" style="min-height: 916px;">
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <ul class="nav nav-pills nav-justified bg-aqua">
+                    <!--Input By Form -->
+                    <li class="active"><a data-toggle="pill" href="#inputForm">Nhập
+                        Thông Tin Sinh Viên</a></li>
+                    <!--Import Excel -->
+                    <li><a data-toggle="pill" href="#importExcel">Import File
+                        Excel</a></li>
+                </ul>
+
+                <div class="tab-content my-border">
+                    <div id="inputForm" class="tab-pane fade in active">
+                        <div class="panel-group">
+                            <form class="form-horizontal" role="form">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Thông Tin Cá Nhân
+                                    </div>
+                                    <div class="panel-body">
+                                        <!--<form class="form-horizontal" role="form">-->
+                                        <!--FullName-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"
+                                                   for="fullName">Họ Và
+                                                Tên:</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="email"
+                                                       class="form-control"
+                                                       id="fullName"
+                                                       placeholder="Nhập Họ Và Tên"/>
+                                            </div>
+                                        </div>
+                                        <!--Student Code-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"
+                                                   for="code">MSSV:</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="password"
+                                                       class="form-control"
+                                                       id="code"
+                                                       placeholder="Nhập MSSV"/>
+                                            </div>
+                                        </div>
+                                        <!--Sex-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2">Giới
+                                                Tính:</label>
+
+                                            <div class="col-sm-10">
+                                                <div class="checkbox">
+                                                    <label><input
+                                                            type="checkbox"/>
+                                                        Nam</label>
+                                                    <label><input
+                                                            type="checkbox"/> Nữ</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Date Of Birth-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"
+                                                   for="dob">Ngày Sinh:</label>
+
+                                            <div class="col-sm-10">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text"
+                                                           class="form-control"
+                                                           id="dob"
+                                                           data-inputmask="'alias': 'dd/mm/yyyy'"
+                                                           data-mask=""/>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!--Phone Number-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"
+                                                   for="phoneNum">Số Điện
+                                                Thoại:</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="text"
+                                                       class="form-control"
+                                                       id="phoneNum"
+                                                       placeholder="Nhập Số Điện Thoại"/>
+                                            </div>
+                                        </div>
+                                        <!--Address-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"
+                                                   for="address">Địa
+                                                Chỉ:</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="text"
+                                                       class="form-control"
+                                                       id="address"
+                                                       placeholder="Nhập Số Điện Thoại"/>
+                                            </div>
+                                        </div>
+                                        <!--Address-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"
+                                                   for="email">Email:</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="text"
+                                                       class="form-control"
+                                                       id="email"
+                                                       placeholder="Nhập Email"/>
+                                            </div>
+                                        </div>
+                                        <!--</form>-->
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Thông Tin Nhập
+                                        Học
+                                    </div>
+                                    <div class="panel-body">
+                                        <!--<form class="form-horizontal" role="form">-->
+                                        <!--studyDate-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"
+                                                   for="studyDate">Ngày Nhập Học
+                                                :</label>
+
+                                            <div class="col-sm-10">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text"
+                                                           class="form-control"
+                                                           id="studyDate"
+                                                           data-inputmask="'alias': 'dd/mm/yyyy'"
+                                                           data-mask=""/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Start term-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"
+                                                   for="startTerm">Kỳ Học Bắt
+                                                Đầu</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="text"
+                                                       class="form-control"
+                                                       id="startTerm"
+                                                       placeholder="Nhập Kỳ Học Bắt Đầu"/>
+                                            </div>
+                                        </div>
+                                        <!--Start English-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2">Tiếng
+                                                Anh Đầu Vào :</label>
+
+                                            <div class="col-sm-10">
+                                                <div class="dropdown">
+                                                    <button class="btn dropdown-toggle"
+                                                            type="button"
+                                                            data-toggle="dropdown">
+                                                        ENG5
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">ENG4</a>
+                                                        </li>
+                                                        <li><a href="#">ENG3</a>
+                                                        </li>
+                                                        <li><a href="#">ENG2</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Student type-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2">Tình
+                                                Trạng :</label>
+
+                                            <div class="col-sm-10">
+                                                <div class="dropdown">
+                                                    <button class="btn dropdown-toggle"
+                                                            type="button"
+                                                            data-toggle="dropdown">
+                                                        Học Bổng 100%
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">Tín Dụng
+                                                            50%</a></li>
+                                                        <li><a href="#">Bình
+                                                            Thường</a></li>
+                                                        <li><a href="#">Tín Dụng
+                                                            100%</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--</form>-->
+                                    </div>
+                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Thông Tin Phụ
+                                        Huynh
+                                    </div>
+                                    <div class="panel-body">
+                                        <!--FullName-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"
+                                                   for="parentEmail">Email Phụ
+                                                Huynh:</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="email"
+                                                       class="form-control"
+                                                       id="parentEmail"
+                                                       placeholder="Nhập Email Phụ Huynh"/>
+                                            </div>
+                                        </div>
+                                        <!--PhoneNum Phụ Huynh-->
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2"
+                                                   for="parentPhone">Số Điện
+                                                Thoại Phụ Huynh:</label>
+
+                                            <div class="col-sm-10">
+                                                <input type="password"
+                                                       class="form-control"
+                                                       id="parentPhone"
+                                                       placeholder="Nhập Số Điện Thoại Phụ Huynh"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!--Excel File-->
+                    <div id="importExcel" class="tab-pane fade">
+                        <h3>Menu 1</h3>
+
+                        <p>Ut enim ad minim veniam, quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>

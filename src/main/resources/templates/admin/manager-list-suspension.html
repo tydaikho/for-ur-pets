@@ -5,49 +5,8 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="box box-borderless">
-                    <h3 class="text-center">Danh Sách Đóng Học Phí</h3>
-                    <!--Tong Ket-->
-                    <!--<div class="col-xs-6 col-md-offset-3">
-                        <div class="box box-primary box-solid">
-                            <div class="box-header with-border">
-                                <h3 class="box-title text-center">Tổng Kết</h3>
+                    <h3 class="text-center">Danh Sách Sinh Viên Ngưng Học</h3>
 
-                                <div class="box-tools pull-right">
-                                    <button type="button"
-                                            class="btn btn-box-tool"
-                                            data-widget="collapse"><i
-                                            class="fa fa-minus"></i></button>
-                                </div>
-                                &lt;!&ndash; /.box-tools &ndash;&gt;
-                            </div>
-                            &lt;!&ndash; /.box-header &ndash;&gt;
-                            <div class="box-body" style="display: block;">
-                                <table class="table table-hover borderless table-responsive">
-                                    <tbody>
-                                    <tr>
-                                        <td><b>Dự Toán Thu</b></td>
-                                        <td>500,000,000 (VNĐ)</td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>Tổng Số Tiền Đã Thu</b></td>
-                                        <td>498,000,000 (VNĐ)</td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>Thiếu</b></td>
-                                        <td>2,000,00 (VNĐ)</td>
-                                    </tr>
-                                    <tr>
-                                        <td><b>Tổng Số Tiền Cho Vay</b></td>
-                                        <td>200,000,000 (VNĐ)</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            &lt;!&ndash; /.box-body &ndash;&gt;
-                        </div>
-
-
-                    </div>-->
                     <div id="tuition_table_wrapper"
                          class="dataTables_wrapper form-inline dt-bootstrap">
                         <div class="row">
@@ -65,13 +24,6 @@
                                     </select> entries</label></div>
                             </div>
                             <div class="col-sm-6">
-                                <!--  <div id="tuition_table_filter"
-                                       class="dataTables_filter">
-                                      <label>Search:<input type="search"
-                                                           class="form-control input-sm"
-                                                           placeholder=""
-                                                           aria-controls="tuition_table"/></label>
-                                  </div>-->
                                 <div class="input-group pull-right">
                                     <div class="input-group-btn">
                                         <button type="button"
@@ -140,28 +92,7 @@
                                             rowspan="1"
                                             colspan="1"
                                             aria-label="CSS grade: activate to sort column ascending">
-                                            Nội Dung Đóng Tiền
-                                        </th>
-                                        <th class="sorting" tabindex="0"
-                                            aria-controls="tuition_table"
-                                            rowspan="1"
-                                            colspan="1"
-                                            aria-label="CSS grade: activate to sort column ascending">
-                                            Phải Đóng
-                                        </th>
-                                        <th class="sorting" tabindex="0"
-                                            aria-controls="tuition_table"
-                                            rowspan="1"
-                                            colspan="1"
-                                            aria-label="CSS grade: activate to sort column ascending">
-                                            Đã Đóng
-                                        </th>
-                                        <th class="sorting" tabindex="0"
-                                            aria-controls="tuition_table"
-                                            rowspan="1"
-                                            colspan="1"
-                                            aria-label="CSS grade: activate to sort column ascending">
-                                            Trạng Thái
+                                           Lý Do
                                         </th>
                                         <th class="sorting" tabindex="0"
                                             aria-controls="tuition_table"
@@ -178,50 +109,44 @@
                                         <td class="sorting_1">1.</td>
                                         <td>SE60964</td>
                                         <td>Trần Khắc Vỹ</td>
-                                        <td>Tín Dụng 50%</td>
-                                        <td>Chuyên Ngành 1</td>
-                                        <td>12,200,000</td>
-                                        <td>12,200,000</td>
-                                        <td>Nộp Đủ</td>
+                                        <td>Đang Ngưng Hoc</td>
+                                        <td>Bị Định Chỉ</td>
                                         <td><a href="#" data-toggle="modal"
-                                               data-target="#tuitionModal">Chi
+                                               data-target="#creditModal">Chi
                                             Tiết</a></td>
                                     </tr>
 
                                     <tr role="row">
-                                        <td class="sorting_1">2.</td>
+                                        <td class="sorting_1">1.</td>
                                         <td>SE60964</td>
                                         <td>Trần Khắc Vỹ</td>
-                                        <td>Tín Dụng 50%</td>
-                                        <td>Chuyên Ngành 1</td>
-                                        <td>12,200,000</td>
-                                        <td>12,200,000</td>
-                                        <td>Nộp Đủ</td>
-                                        <td><a href="#">Chi Tiết</a></td>
+                                        <td>Đang Ngưng Hoc</td>
+                                        <td>Bị Định Chỉ</td>
+                                        <td><a href="#" data-toggle="modal"
+                                               data-target="#creditModal">Chi
+                                            Tiết</a></td>
                                     </tr>
 
                                     <tr role="row">
-                                        <td class="sorting_1">3.</td>
+                                        <td class="sorting_1">1.</td>
                                         <td>SE60964</td>
                                         <td>Trần Khắc Vỹ</td>
-                                        <td>Tín Dụng 50%</td>
-                                        <td>Chuyên Ngành 1</td>
-                                        <td>12,200,000</td>
-                                        <td>12,200,000</td>
-                                        <td>Nộp Đủ</td>
-                                        <td><a href="#">Chi Tiết</a></td>
+                                        <td>Đang Ngưng Hoc</td>
+                                        <td>Bị Định Chỉ</td>
+                                        <td><a href="#" data-toggle="modal"
+                                               data-target="#creditModal">Chi
+                                            Tiết</a></td>
                                     </tr>
 
                                     <tr role="row">
-                                        <td class="sorting_1">4.</td>
+                                        <td class="sorting_1">1.</td>
                                         <td>SE60964</td>
                                         <td>Trần Khắc Vỹ</td>
-                                        <td>Tín Dụng 50%</td>
-                                        <td>Chuyên Ngành 1</td>
-                                        <td>12,200,000</td>
-                                        <td>12,200,000</td>
-                                        <td>Nộp Đủ</td>
-                                        <td><a href="#">Chi Tiết</a></td>
+                                        <td>Đang Ngưng Hoc</td>
+                                        <td>Bị Định Chỉ</td>
+                                        <td><a href="#" data-toggle="modal"
+                                               data-target="#creditModal">Chi
+                                            Tiết</a></td>
                                     </tr>
 
 
@@ -230,23 +155,10 @@
                                     <tr>
                                         <th rowspan="1" colspan="1">STT</th>
                                         <th rowspan="1" colspan="1">MSSV</th>
-                                        <th rowspan="1" colspan="1">
-                                            Họ Và Tên
-                                        </th>
-                                        <th rowspan="1" colspan="1">Trạng Thái
-                                        </th>
-                                        <th rowspan="1" colspan="1">Nội Dung
-                                            Đóng Tiền
-                                        </th>
-                                        <th rowspan="1" colspan="1">Phải Đóng
-                                        </th>
-                                        <th rowspan="1" colspan="1">
-                                            Đã Đóng
-                                        </th>
-                                        <th rowspan="1" colspan="1">Tình Trạng
-                                        </th>
-                                        <th rowspan="1" colspan="1">ChiTiết
-                                        </th>
+                                        <th rowspan="1" colspan="1">Họ Và Tên</th>
+                                        <th rowspan="1" colspan="1">Trạng Thái </th>
+                                        <th rowspan="1" colspan="1">Lý Do</th>
+                                        <th rowspan="1" colspan="1">Xem Chi Tiết</th>
                                     </tr>
                                     </tfoot>
                                 </table>
@@ -321,7 +233,7 @@
         <!-- /.row -->
 
         <!--Modal Chi Tiet-->
-        <div class="modal fade" id="tuitionModal" role="dialog">
+        <div class="modal fade" id="creditModal" role="dialog">
             <div class="modal-dialog modal-nor">
                 <div class="modal-content">
                     <div class="modal-header bg-primary">
@@ -435,13 +347,13 @@
                             </div>
                         </div>
                         <div class="box box-borderless">
-                               <h5 class="text-center"><b>Tổng Kết</b></h5>
-                               <p class="text-center"><b>Đã Vay : </b> <span>70,200,000 (VNĐ)</span>
-                               </p>
-                               <p class="text-center"><b>Lãi Vay : </b> <span>18,200,000 (VNĐ)</span>
-                               </p>
-                               <p class="text-center"><b>Tổng : </b> <span>88,400,000 (VNĐ)</span>
-                               </p>
+                            <h5 class="text-center"><b>Tổng Kết</b></h5>
+                            <p class="text-center"><b>Đã Vay : </b> <span>70,200,000 (VNĐ)</span>
+                            </p>
+                            <p class="text-center"><b>Lãi Vay : </b> <span>18,200,000 (VNĐ)</span>
+                            </p>
+                            <p class="text-center"><b>Tổng : </b> <span>88,400,000 (VNĐ)</span>
+                            </p>
                         </div>
 
                     </div>
