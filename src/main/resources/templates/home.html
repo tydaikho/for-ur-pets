@@ -6,11 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Home</title>
 
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          name="viewport"/>
+
     <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}"/>
-   <link rel="stylesheet"
+    <link rel="stylesheet"
           th:href="@{/css/font-awesome-4.4.0/css/font-awesome.min.css}"/>
-   <!-- <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>-->
+    <!-- <link rel="stylesheet"
+           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>-->
     <link rel="stylesheet" th:href="@{/css/AdminLTE.min.css}" type="text/css"/>
     <link rel="stylesheet" th:href="@{/css/skins/skin-blue.css}"
           type="text/css"/>
@@ -24,8 +28,10 @@
 </head>
 <body class="skin-blue sidebar-mini wysihtml5-supported">
 <div class="wrapper">
+    <!--Header-->
     <header th:replace="layout/header :: header"></header>
-
+    <!--End Header-->
+    <!--SideBar-->
     <aside class="main-sidebar">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar" style="height: auto;">
@@ -53,102 +59,18 @@
                 </div>
             </form>
             <!-- /.search form -->
-
+            <!-- sidebar menu: : style can be found in sidebar.less -->
             <th:block th:if="${sidebar} != null">
                 <ul th:replace="${sidebar} :: ul"></ul>
             </th:block>
-
         </section>
     </aside>
-
+    <!--End Sidebar-->
 
     <th:block th:if="${content} != null">
         <div th:replace="${content} :: div"/>
     </th:block>
 
-
-    <!-- Modal User Profile-->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog modal-nor">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close"
-                            data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title text-center"><b
-                            th:text="#{student.profile.title}">Thông Tin Sinh
-                        Viên</b></h4>
-                </div>
-                <div class="modal-body">
-                    <table class="table borderless">
-                        <thead>
-                        <tr>
-                            <td style="width: 15%"></td>
-                            <td style="width: 15%"></td>
-                            <td style="width: 20%"></td>
-                            <td style="width: 15%"></td>
-                            <td style="width: 15%"></td>
-                            <td></td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td><b>Họ Và Tên</b></td>
-                            <td colspan="2">Trần Khắc Vỹ</td>
-                            <td><b>Giới Tính</b></td>
-                            <td colspan="2">Nam</td>
-                        </tr>
-                        <tr>
-                            <td><b>MSSV</b></td>
-                            <td colspan="2">SE60964</td>
-                            <td><b>CMND</b></td>
-                            <td colspan="2">241488591</td>
-                        </tr>
-                        <tr>
-                            <td><b>Ngày Sinh</b></td>
-                            <td colspan="2">07/06/1993</td>
-                            <td><b>Điện Thoại</b></td>
-                            <td colspan="2">01672011550</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><b>Email</b></td>
-                            <td colspan="4">VyTKSE60964@fpt.edu.vn</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><b>Email Phụ Huynh</b></td>
-                            <td colspan="4">phuhuynh@gmail.com
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><b>Số Điện Thoại Phụ Huynh</b></td>
-                            <td colspan="4">01672011550</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><b>Tình Trạng</b></td>
-                            <td colspan="4">Tín Dụng 50%</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><b>Khóa Nhập Học</b></td>
-                            <td colspan="4">Khóa 7</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><b>Tiếng Anh Đầu Và</b></td>
-                            <td colspan="4">ENG4</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"><b>Học Kỳ</b></td>
-                            <td colspan="4">Fall 2011( 12/6/2011 - 12/9/2011)</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default"
-                            data-dismiss="modal">Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
 </div>

@@ -57,7 +57,7 @@ public class HomeController {
 
     @RequestMapping("/student/profile")
     public String studentProfile(Model model){
-        model.addAttribute("content", "student/update-profile");
+        model.addAttribute("content", "student/profile");
         model.addAttribute("sidebar", "student/student-sidebar");
 
         return "home";
